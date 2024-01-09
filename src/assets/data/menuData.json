@@ -1,5 +1,5 @@
 {
-    "specials": [
+    "Specials": [
         {
             "name": "MACARONI & CHEESE PIZZA (available only on Sundays!)",
             "description": "EVERY SUNDAY! Our speciality mac n' cheese pizza. house-made mac & cheddar, fontina, and asiago cheese; available regular or vegan. get it by the slice or whole pie!",
@@ -11,7 +11,7 @@
             "vegan": true
         }
     ],
-    "starters": [
+    "Starters": [
         {
             "name": "Garlic Knots aka Lil Homies",
             "description": "six hand-rolled sourdough knots tossed with olive oil, fresh garlic, and grana padano. served with house-made marinara (available vegan)",
@@ -33,7 +33,7 @@
             "vegan": true
         }
     ],
-    "salads": [
+    "Salads": [
         {
             "name": "Vegan Mixed Green",
             "description": "organic mesclun greens, avocado, tomatoes, cucumbers, and house-made red wine vinaigrette ",
@@ -55,7 +55,7 @@
             "vegan": false
         }
     ],
-    "pizzas": [
+    "Pizzas": [
         {
             "name": "Cheese",
             "description": "hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, & grana padano",

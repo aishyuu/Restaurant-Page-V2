@@ -2,17 +2,35 @@ import menu from '../assets/data/menuData.json'
 
 function menuPage(contentDiv) {
     const menuPageDiv = document.createElement("div");
-    const test = document.createElement('h1');
-    test.textContent = "MENU PAGE HERE"
+    menuPageDiv.classList.add("menu-page")
     
-    // for (const key in menu) {
-    //     const element = menu[key];
-    //     for (let index = 0; index < menu[key].length; index++) {
-    //         console.log(menu[key][index].name)
-    //     }
-    // }
+    for (const key in menu) {
+        const element = menu[key];
+        const menuSectionTitle = document.createElement('h1');
+        menuSectionTitle.textContent = key;
+        menuSectionTitle.classList.add('menu-section-title')
+        menuPageDiv.appendChild(menuSectionTitle)
 
-    menuPageDiv.appendChild(test);
+        const menuSection = document.createElement("div");
+        menuSection.classList.add("menu-section")
+        for (let index = 0; index < element.length; index++) {
+            const menuItem = document.createElement("div");
+            menuItem.classList.add("menu-item-div");
+
+            const menuItemTitle = document.createElement("h1");
+            menuItemTitle.classList.add("menu-item-title");
+            menuItemTitle.textContent = element[index].name;
+            menuItem.appendChild(menuItemTitle);
+
+            const menuItemDescription = document.createElement("p");
+            menuItemDescription.classList.add("menu-item-description")
+            menuItemDescription.textContent = element[index].description;
+            menuItem.appendChild(menuItemDescription)
+
+            menuSection.appendChild(menuItem)
+        }
+        menuPageDiv.appendChild(menuSection)
+    }
     contentDiv.appendChild(menuPageDiv)
 }
 

@@ -254,6 +254,37 @@ table {
 	margin: 0 auto;
 	font-size: 1rem;
 	line-height: 2rem;
+}
+
+.menu-page {
+	padding: 1rem;
+}
+
+.menu-section-title {
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	color: #7A5C61;
+	margin-bottom: 2rem;
+}
+
+.menu-section {
+	width: 80%;
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 3rem auto
+}
+
+.menu-item-div {
+	width: 40%;
+}
+
+.menu-item-title {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -873,23 +904,41 @@ function aboutPage(contentDiv) {
 
 
 ;// CONCATENATED MODULE: ./src/assets/data/menuData.json
-const menuData_namespaceObject = {};
+const menuData_namespaceObject = JSON.parse('{"Specials":[{"name":"MACARONI & CHEESE PIZZA (available only on Sundays!)","description":"EVERY SUNDAY! Our speciality mac n\' cheese pizza. house-made mac & cheddar, fontina, and asiago cheese; available regular or vegan. get it by the slice or whole pie!","vegan":false},{"name":"GF Vegan House Special","description":"house-made tomato sauce, miyoko\'s organic vegan cheese, abbot\'s vegan GF sausage, fresh jalapeños, red onion, & gluten-free crust from Venice Bakery, Los Angeles","vegan":true}],"Starters":[{"name":"Garlic Knots aka Lil Homies","description":"six hand-rolled sourdough knots tossed with olive oil, fresh garlic, and grana padano. served with house-made marinara (available vegan)","vegan":false},{"name":"Macaroni & Cheese Side Order","description":"AVAILABLE ON SUNDAYS ONLY! our speciality mac n\' cheese! house-made mac & cheddar, fontina, and asiago cheese side","vegan":false},{"name":"Broccoli Rabe","description":"broccoli rabe with fresh garlic, red chili flakes, & shaved grana padano (available vegan)","vegan":false},{"name":"Vegan Macaroni & Cheese Side Order","description":"AVAILABLE ON SUNDAYS ONLY! our speciality vegan mac n\' cheese! house-made vegan mac & cheddar side","vegan":true}],"Salads":[{"name":"Vegan Mixed Green","description":"organic mesclun greens, avocado, tomatoes, cucumbers, and house-made red wine vinaigrette ","vegan":true},{"name":"Arugula","description":"organic arugula, grana padano, lemon, sea salt, and olive oil","vegan":false},{"name":"Caprese","description":"fresh mozzarella, tomatoes, organic basil, & olive oil","vegan":false},{"name":"Caesar","description":"organic chopped romaine, house-made croutons, grana padano, lemon, & house-made Caesar dressing ","vegan":false}],"Pizzas":[{"name":"Cheese","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, & grana padano","vegan":false},{"name":"Meat Jesus","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, cup & crisp pepperoni, local Italian sausage, and thick cut bacon","vegan":false},{"name":"Vegan Cheese","description":"hand stretched sourdough crust, house-made tomato sauce, Miyoko\'s vegan mozzarella","vegan":true},{"name":"Vegan Seitan Meats Jesus","description":"hand stretched sourdough crust, house-made tomato sauce, miyoko\'s organic vegan mozzarella, The Be-Hive vegan pepperoni, Abbott\'s Butcher vegan sausage, & The BE-Hive vegan bacon","vegan":false},{"name":"Pepperoni","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, cup & crisp pepperoni, and grana padano","vegan":false},{"name":"Margherita","description":"hand stretched sourdough crust, house-made tomato sauce, fresh mozzarella, grana padano, & fresh organic basil","vegan":false},{"name":"Vegan Pepperoni","description":"hand stretched sourdough crust, house-made tomato sauce, miyoko\'s organic vegan mozzarella, and best in class vegan pepperoni by The BE-Hive","vegan":true},{"name":"Vegan Margherita","description":"hand stretched sourdough crust, house-made tomato sauce, miyoko\'s organic vegan mozzarella, and fresh organic basil","vegan":true},{"name":"White","description":"hand stretched sourdough crust, low moisture fresh mozzarella, ricotta cheese, grana padano, extra virgin olive oil, salt & pepper","vegan":false},{"name":"Soppressata & Mushroom","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, Creminelli spicy Calabrese Italian Salami, sautéed mushrooms, ricotta salata cheese, & Christopher Ranch California garlic","vegan":false},{"name":"Goat Cheese & Fresh Spinach","description":"hand stretched sourdough crust, mozzarella, Laura Chenel goat cheese, Kalamata olives, red onions; topped with fresh loose-leaf organic spinach","vegan":false},{"name":"Sicilian","description":"square, thick sourdough crust pizza with house-made tomato sauce, mozzarella, fresh mozzarella pearls, grana padano, oregano & extra virgin olive oil","vegan":false},{"name":"North Shore","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, thick-cut bacon, fresh cut pineapple, & grana padano","vegan":false},{"name":"Supreme Meat Jesus","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, cup & crisp pepperoni, local Italian sausage, thick cut bacon, fresh red bell peppers, Kalamata olives, sautéed mushrooms, red onions, fresh organic spinach, Christopher Ranch California garlic, & cherry tomatoes","vegan":false},{"name":"Veggie","description":"hand stretched sourdough crust, house-made tomato sauce, mozzarella, fresh mozzarella pearls, fresh red bell peppers, Kalamata olives, sautéed mushrooms, red onions, fresh organic spinach, Christopher Ranch California garlic, cherry tomatoes, & grana padano","vegan":false},{"name":"Vegan Supreme Jesus","description":"hand stretched sourdough crust, house-made tomato sauce, miyoko\'s organic vegan mozzarella, The Be-Hive vegan pepperoni, Abbott\'s Butcher vegan sausage, The BE-Hive vegan bacon, fresh red bell peppers, Kalamata olives, sautéed mushrooms, red onions, organic spinach, Christopher Ranch California garlic, & cherry tomatoes","vegan":true},{"name":"Vegan Veggie","description":"hand stretched sourdough crust, house-made tomato sauce, miyoko\'s organic vegan mozzarella, fresh red bell peppers, Kalamata olives, sautéed mushrooms, red onions, fresh organic spinach, Christopher Ranch California garlic, & cherry tomatoes","vegan":true},{"name":"Macaroni & Cheese (available regular or vegan)","description":"every sunday, our speciality mac n\' cheese pizza.. house-made mac & cheddar, fontina, and asiago cheese; available regular or vegan. Get it by the slice or whole pie! (AVAILABLE ON SUNDAYS ONLY!)","vegan":true}]}');
 ;// CONCATENATED MODULE: ./src/pages/menu.js
 
 
 function menuPage(contentDiv) {
     const menuPageDiv = document.createElement("div");
-    const test = document.createElement('h1');
-    test.textContent = "MENU PAGE HERE"
+    menuPageDiv.classList.add("menu-page")
     
-    // for (const key in menu) {
-    //     const element = menu[key];
-    //     for (let index = 0; index < menu[key].length; index++) {
-    //         console.log(menu[key][index].name)
-    //     }
-    // }
+    for (const key in menuData_namespaceObject) {
+        const element = menuData_namespaceObject[key];
+        const menuSectionTitle = document.createElement('h1');
+        menuSectionTitle.textContent = key;
+        menuSectionTitle.classList.add('menu-section-title')
+        menuPageDiv.appendChild(menuSectionTitle)
 
-    menuPageDiv.appendChild(test);
+        const menuSection = document.createElement("div");
+        menuSection.classList.add("menu-section")
+        for (let index = 0; index < element.length; index++) {
+            const menuItem = document.createElement("div");
+            menuItem.classList.add("menu-item-div");
+
+            const menuItemTitle = document.createElement("h1");
+            menuItemTitle.classList.add("menu-item-title");
+            menuItemTitle.textContent = element[index].name;
+            menuItem.appendChild(menuItemTitle);
+
+            const menuItemDescription = document.createElement("p");
+            menuItemDescription.classList.add("menu-item-description")
+            menuItemDescription.textContent = element[index].description;
+            menuItem.appendChild(menuItemDescription)
+
+            menuSection.appendChild(menuItem)
+        }
+        menuPageDiv.appendChild(menuSection)
+    }
     contentDiv.appendChild(menuPageDiv)
 }
 
