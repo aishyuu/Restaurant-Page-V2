@@ -2,6 +2,7 @@ import './style.css'
 import aboutPage from './pages/about';
 import menuPage from './pages/menu';
 import contactPage from './pages/contact';
+import homePage from './pages/home';
 
 
 function pageLoader(contentDiv, activeTab, pageName) {
@@ -14,6 +15,9 @@ function pageLoader(contentDiv, activeTab, pageName) {
     pageDiv.innerHTML = ""
 
     switch (pageName) {
+        case 'Home':
+            homePage(contentDiv);
+            return 'Home';
         case 'About':
             aboutPage(contentDiv);
             return 'About';
@@ -39,7 +43,7 @@ function site() {
     // page content creation
     const pageDiv = document.createElement("div");
     pageDiv.classList.add('page-content');
-    aboutPage(pageDiv);
+    homePage(pageDiv);
 
     // Content in Header
     const logo = document.createElement("h1");
@@ -55,8 +59,8 @@ function site() {
     tabsDiv.classList.add('header-tabs')
 
     // Tab Content
-    const tabNames = ['About', 'Menu', 'Contact'];
-    let activeTab = 'About';
+    const tabNames = ['Home', 'About', 'Menu', 'Contact'];
+    let activeTab = 'Home';
     for (let index = 0; index < tabNames.length; index++) {
         const tabIndiv = document.createElement('button');
         tabIndiv.classList.add("tab-indiv")

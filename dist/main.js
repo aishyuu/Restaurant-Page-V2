@@ -19,8 +19,12 @@
 
 
 var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(281), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(538), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_2___ = new URL(/* asset import */ __webpack_require__(557), __webpack_require__.b);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+var ___CSS_LOADER_URL_REPLACEMENT_2___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_2___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
 	font-family: 'Wonderbar';
@@ -202,8 +206,54 @@ table {
 	cursor: pointer;
 }
 
-.page-content {
-	padding: 1rem;
+.page {
+	min-height: calc(100vh - 8rem);
+}
+
+.home-page {
+	background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	-webkit-text-stroke: 2px black;
+	text-align: center;
+	gap: 1rem;
+}
+
+.home-page > h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.home-page > p {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.about-page-img-header {
+	width: 100%;
+	height: 30vh;
+	background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.about-page-header {
+	padding: 1.5rem;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #7A5C61;
+}
+
+.about-page-text {
+	width: 45%;
+	margin: 0 auto;
+	font-size: 1rem;
+	line-height: 2rem;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -599,6 +649,20 @@ module.exports = styleTagTransform;
 
 module.exports = __webpack_require__.p + "1d2342f723323967c212.otf";
 
+/***/ }),
+
+/***/ 538:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "cb3909d696bec5047e61.webp";
+
+/***/ }),
+
+/***/ 557:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "944382a619455301be79.jpg";
+
 /***/ })
 
 /******/ 	});
@@ -782,12 +846,29 @@ var update = injectStylesIntoStyleTag_default()(style/* default */.Z, options);
 
 ;// CONCATENATED MODULE: ./src/pages/about.js
 function aboutPage(contentDiv) {
+    // Creating about page div
     const aboutPageDiv = document.createElement("div");
-    const test = document.createElement('h1');
-    test.textContent = "ABOUT PAGE HERE"
+    aboutPageDiv.classList.add("page", "about-page");
 
-    aboutPageDiv.appendChild(test);
-    contentDiv.appendChild(aboutPageDiv)
+    // Creating image header div
+    const imageHeaderDiv = document.createElement("div");
+    imageHeaderDiv.classList.add("about-page-img-header")
+
+    // Creating About Us Header Text
+    const aboutH = document.createElement("h1");
+    aboutH.classList.add('about-page-header');
+    aboutH.textContent = "About Us";
+
+    // Creating About Us Inner Text
+    const aboutText = document.createElement("p");
+    aboutText.classList.add('about-page-text');
+    aboutText.textContent = "Pizzanista! brings seditiously delicious pizza to Southern California; made from fresh, locally-sourced ingredients. Founded in October 2010 by legendary professional skateboarder Salman Agah, Pizzanista! blends the historic flavor and thin-crust style of New York pizza with California’s abundance of fresh produce and small-batch ingredients. Family owned and operated, Pizzanista! features traditional hand-tossed pizza dough made fresh daily using 200-year old sourdough cultures from Naples, hand-milled marinara sauce made from California tomatoes, innovative pizza toppings, and farm-fresh salads. Dine-in, take-out, delivery, and pizza by the slice are available.\n\nStay tuned for more upcoming guest chef nights and culinary/artistic collaborations. Pizzanista! looks forward to serving you!"
+
+    aboutPageDiv.appendChild(imageHeaderDiv);
+    aboutPageDiv.appendChild(aboutH);
+    aboutPageDiv.appendChild(aboutText);
+    contentDiv.appendChild(aboutPageDiv);
+    
 }
 
 
@@ -813,7 +894,29 @@ function contactPage(contentDiv) {
 }
 
 
+;// CONCATENATED MODULE: ./src/pages/home.js
+function homePage(contentDiv) {
+    // Creating about page div
+    const homePageDiv = document.createElement("div");
+    homePageDiv.classList.add("page", "home-page")
+
+    // Creating Headline
+    const headline = document.createElement('h1');
+    headline.textContent = "Join us for your next meal today!"
+
+    homePageDiv.appendChild(headline);
+
+    // Creating Subline
+    const subline = document.createElement('p');
+    subline.textContent = "You won't regret it"
+    homePageDiv.appendChild(subline);
+
+    contentDiv.appendChild(homePageDiv);
+}
+
+
 ;// CONCATENATED MODULE: ./src/index.js
+
 
 
 
@@ -830,6 +933,9 @@ function pageLoader(contentDiv, activeTab, pageName) {
     pageDiv.innerHTML = ""
 
     switch (pageName) {
+        case 'Home':
+            homePage(contentDiv);
+            return 'Home';
         case 'About':
             aboutPage(contentDiv);
             return 'About';
@@ -855,7 +961,7 @@ function site() {
     // page content creation
     const pageDiv = document.createElement("div");
     pageDiv.classList.add('page-content');
-    aboutPage(pageDiv);
+    homePage(pageDiv);
 
     // Content in Header
     const logo = document.createElement("h1");
@@ -871,8 +977,8 @@ function site() {
     tabsDiv.classList.add('header-tabs')
 
     // Tab Content
-    const tabNames = ['About', 'Menu', 'Contact'];
-    let activeTab = 'About';
+    const tabNames = ['Home', 'About', 'Menu', 'Contact'];
+    let activeTab = 'Home';
     for (let index = 0; index < tabNames.length; index++) {
         const tabIndiv = document.createElement('button');
         tabIndiv.classList.add("tab-indiv")
