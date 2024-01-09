@@ -872,11 +872,22 @@ function aboutPage(contentDiv) {
 }
 
 
+;// CONCATENATED MODULE: ./src/assets/data/menuData.json
+const menuData_namespaceObject = {};
 ;// CONCATENATED MODULE: ./src/pages/menu.js
+
+
 function menuPage(contentDiv) {
     const menuPageDiv = document.createElement("div");
     const test = document.createElement('h1');
     test.textContent = "MENU PAGE HERE"
+    
+    // for (const key in menu) {
+    //     const element = menu[key];
+    //     for (let index = 0; index < menu[key].length; index++) {
+    //         console.log(menu[key][index].name)
+    //     }
+    // }
 
     menuPageDiv.appendChild(test);
     contentDiv.appendChild(menuPageDiv)
