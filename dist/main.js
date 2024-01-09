@@ -207,7 +207,7 @@ table {
 }
 
 .page {
-	min-height: calc(100vh - 8rem);
+	min-height: calc(100vh - 6rem);
 }
 
 .home-page {
@@ -285,6 +285,22 @@ table {
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
+}
+
+.footer-section {
+	padding: 2rem;
+	text-align: center;
+	font-size: 1.5rem;
+	background-color: #392759;
+}
+
+.footer-section > a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-section > a:hover {
+	text-decoration: underline;
 }`, ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
@@ -943,17 +959,6 @@ function menuPage(contentDiv) {
 }
 
 
-;// CONCATENATED MODULE: ./src/pages/contact.js
-function contactPage(contentDiv) {
-    const contactPageDiv = document.createElement("div");
-    const test = document.createElement('h1');
-    test.textContent = "CONTACT PAGE HERE"
-
-    contactPageDiv.appendChild(test);
-    contentDiv.appendChild(contactPageDiv)
-}
-
-
 ;// CONCATENATED MODULE: ./src/pages/home.js
 function homePage(contentDiv) {
     // Creating about page div
@@ -982,7 +987,6 @@ function homePage(contentDiv) {
 
 
 
-
 function pageLoader(contentDiv, activeTab, pageName) {
     if(pageName === activeTab) {
         console.log("Nope, not changing it");
@@ -1002,9 +1006,6 @@ function pageLoader(contentDiv, activeTab, pageName) {
         case 'Menu':
             menuPage(contentDiv);
             return 'Menu';
-        case 'Contact':
-            contactPage(contentDiv);
-            return 'Contact';
         default:
             break;
     }
@@ -1037,7 +1038,7 @@ function site() {
     tabsDiv.classList.add('header-tabs')
 
     // Tab Content
-    const tabNames = ['Home', 'About', 'Menu', 'Contact'];
+    const tabNames = ['Home', 'About', 'Menu'];
     let activeTab = 'Home';
     for (let index = 0; index < tabNames.length; index++) {
         const tabIndiv = document.createElement('button');
@@ -1052,6 +1053,18 @@ function site() {
 
     header.appendChild(tabsDiv);
     allContent.appendChild(pageDiv);
+
+    // Footer Content
+    const footerDiv = document.createElement("div");
+    footerDiv.classList.add("footer-section");
+    const footerLink = document.createElement("a");
+    footerLink.href = "https://github.com/aishyuu/Restaurant-Page-V2";
+    footerLink.target = "_blank";
+    footerLink.textContent = "Source Code Here";
+    
+    footerDiv.appendChild(footerLink);
+
+    allContent.appendChild(footerDiv)
 }
 
 site()

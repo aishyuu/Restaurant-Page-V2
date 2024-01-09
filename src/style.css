@@ -179,7 +179,7 @@ table {
 }
 
 .page {
-	min-height: calc(100vh - 8rem);
+	min-height: calc(100vh - 6rem);
 }
 
 .home-page {
@@ -257,4 +257,20 @@ table {
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
+}
+
+.footer-section {
+	padding: 2rem;
+	text-align: center;
+	font-size: 1.5rem;
+	background-color: #392759;
+}
+
+.footer-section > a {
+	text-decoration: none;
+	color: white;
+}
+
+.footer-section > a:hover {
+	text-decoration: underline;
 }
